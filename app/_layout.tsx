@@ -31,7 +31,7 @@ function SplashScreen() {
       <Animated.View style={[splashStyles.logoWrap, { transform: [{ scale: pulseAnim }] }]}>
         <Ionicons name="wallet" size={56} color={COLORS.white} />
       </Animated.View>
-      <Text style={splashStyles.title}>FinTech</Text>
+      <Text style={splashStyles.title}>ElgaFinTech Wallet</Text>
       <Text style={splashStyles.subtitle}>Loading your account...</Text>
       <View style={splashStyles.dotsRow}>
         {[0, 1, 2].map((i) => (

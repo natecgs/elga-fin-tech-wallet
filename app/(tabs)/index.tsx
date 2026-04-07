@@ -8,7 +8,6 @@ import {
   RefreshControl,
   Platform,
   Alert,
-  ImageBackground,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
@@ -73,11 +72,7 @@ export default function HomeScreen() {
   return (
     <View style={styles.screen}>
       {/* Header */}
-      <ImageBackground
-        source={require('../../assets/logo.png')}
-        style={styles.header}
-        imageStyle={{ opacity: 0.2, resizeMode: 'cover' }}
-      >
+      <View style={styles.header}>
         <View style={styles.headerTop}>
           <View style={styles.greetingWrap}>
             <View style={styles.avatarWrap}>
@@ -96,7 +91,7 @@ export default function HomeScreen() {
             <View style={styles.notifBadge} />
           </TouchableOpacity>
         </View>
-      </ImageBackground>
+      </View>
 
       <ScrollView
         style={styles.scrollView}

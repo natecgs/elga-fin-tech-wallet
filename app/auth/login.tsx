@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import {
   View,
   Text,
+  Image,
   TextInput,
   TouchableOpacity,
   StyleSheet,
@@ -10,7 +11,6 @@ import {
   ScrollView,
   ActivityIndicator,
   Animated,
-  Image,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
@@ -211,11 +211,7 @@ export default function LoginScreen() {
       >
         {/* Header / Branding */}
         <View style={styles.brandSection}>
-          <Image
-            source={require('../../assets/logo.png')}
-            style={styles.logoImage}
-            resizeMode="contain"
-          />
+          <Image source={require('../assets/logo.png')} style={styles.logoImage} resizeMode="contain" />
           
           <Text style={styles.appTagline}>Your all-in-one mobile wallet</Text>
         </View>
@@ -378,9 +374,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 40,
   },
+  logoBadge: {
+    width: 86,
+    height: 86,
+    borderRadius: 43,
+    backgroundColor: COLORS.primary,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: SPACING.md,
+  },
   logoImage: {
-    width: 120,
-    height: 120,
+    width: 86,
+    height: 86,
     marginBottom: SPACING.md,
   },
   appName: {
